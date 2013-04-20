@@ -28,6 +28,7 @@ public class CommandHandler implements CommandExecutor {
 					commandsender.sendMessage(ChatColor.GREEN + "/namer ColorOn  -  Turns color on for newly spawned mobs");
 					commandsender.sendMessage(ChatColor.GREEN + "/namer clear [MobType]  -  Removes all names for this Mob Type (Leaving just the mob type as its name which you can remove later)");
 					commandsender.sendMessage("***************** That's it! *****************");
+					return true;
 				}
 				if (args[0].equalsIgnoreCase("add")) {
 					commandsender.sendMessage(ChatColor.GREEN + "Go on... it's /namer add [MobType] [Name]");
