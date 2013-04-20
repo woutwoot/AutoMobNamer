@@ -1,6 +1,6 @@
 AutoMobNamer
 ============
 
-Bukkit plugin that automatically gives mobs a random name when they spawn.
+Bukkit plugin that automatically gives mobs a random name tag when they spawn.
 
-Made by Warby579(Ultibyte) and woutwoot.
+Made by Andrew (UltiByte), and woutwoot.
