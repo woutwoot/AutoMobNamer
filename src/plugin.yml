@@ -1,6 +1,7 @@
 name: AutoMobNamer
 main: net.ultibyte.AutoMobNamer.AutoMobNamer
 version: 1.00
+authors: [UltiByte, woutwoot]
 commands:
   namer:
     description: Manipulate the names and naming procedure for mobs
