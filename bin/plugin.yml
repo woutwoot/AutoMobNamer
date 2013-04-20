@@ -1,9 +1,0 @@
-name: AutoMobNamer
-main: net.ultibyte.AutoMobNamer.AutoMobNamer
-version: 1.00
-commands:
-  namer:
-    description: Manipulate the names and naming procedure for mobs
-    usage: /namer [help/add/remove/ClearAll]
-    permission: automobnamer.manipulate
-    permission-message: You're not able to use that command! (You're probably not an admin)!
