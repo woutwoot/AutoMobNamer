@@ -1759,5 +1759,6 @@ public class AutoMobNamer extends JavaPlugin implements Listener {
 		}
 		return false;
 	}
-
+		return false;
+	}
 }
