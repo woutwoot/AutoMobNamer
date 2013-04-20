@@ -11,6 +11,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Server;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
@@ -144,173 +145,175 @@ public class AutoMobNamer extends JavaPlugin implements Listener {
 
 	@EventHandler
 	public void onCreatureSpawn(CreatureSpawnEvent event) {
-		EntityType mob = event.getEntityType();
 		PutColorCodesIntoList();
+		setRandomName(event.getEntity());
+	}
 
+	public void setRandomName(LivingEntity ent){
+		EntityType mob = ent.getType();
 		if (mob == EntityType.BAT) {
 			int index = createRandom(0, BatNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + BatNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + BatNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.CHICKEN) {
 			int index = createRandom(0, ChickenNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + ChickenNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + ChickenNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.COW) {
 			int index = createRandom(0, CowNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + CowNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + CowNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.IRON_GOLEM) {
 			int index = createRandom(0, IronGolemNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + IronGolemNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + IronGolemNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.MUSHROOM_COW) {
 			int index = createRandom(0, MooshroomNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + MooshroomNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + MooshroomNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.OCELOT) {
 			int index = createRandom(0, OcelotNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + OcelotNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + OcelotNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.PIG) {
 			int index = createRandom(0, PigNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + PigNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + PigNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.SHEEP) {
 			int index = createRandom(0, SheepNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + SheepNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + SheepNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.SQUID) {
 			int index = createRandom(0, SquidNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + SquidNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + SquidNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.WOLF) {
 			int index = createRandom(0, WolfNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + WolfNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + WolfNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.BLAZE) {
 			int index = createRandom(0, BlazeNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + BlazeNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + BlazeNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.CAVE_SPIDER) {
 			int index = createRandom(0, CaveSpiderNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + CaveSpiderNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + CaveSpiderNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.CREEPER) {
 			int index = createRandom(0, CreeperNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + CreeperNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + CreeperNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.ENDER_DRAGON) {
 			int index = createRandom(0, EnderDragonNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + EnderDragonNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + EnderDragonNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.ENDERMAN) {
 			int index = createRandom(0, EndermanNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + EndermanNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + EndermanNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.GHAST) {
 			int index = createRandom(0, GhastNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + GhastNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + GhastNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.MAGMA_CUBE) {
 			int index = createRandom(0, MagmaCubeNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + MagmaCubeNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + MagmaCubeNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.SILVERFISH) {
 			int index = createRandom(0, SilverfishNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + SilverfishNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + SilverfishNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.SKELETON) {
 			int index = createRandom(0, SkeletonNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + SkeletonNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + SkeletonNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.SLIME) {
 			int index = createRandom(0, SlimeNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + SlimeNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + SlimeNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.SNOWMAN) {
 			int index = createRandom(0, SnowGolemNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + SnowGolemNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + SnowGolemNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.SPIDER) {
 			int index = createRandom(0, SpiderNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + SpiderNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + SpiderNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.WITCH) {
 			int index = createRandom(0, WitchNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + WitchNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + WitchNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.WITHER) {
 			int index = createRandom(0, WitherNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + WitherNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + WitherNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.ZOMBIE) {
 			int index = createRandom(0, ZombieNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + ZombieNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + ZombieNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.VILLAGER) {
 			int index = createRandom(0, VillagerNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + VillagerNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + VillagerNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
 
 		if (mob == EntityType.PIG_ZOMBIE) {
 			int index = createRandom(0, ZombiePigmanNames.size());
-			event.getEntity().setCustomName(RandomColorMethod() + ZombiePigmanNames.get(index));
-			event.getEntity().setCustomNameVisible(true);
+			ent.setCustomName(RandomColorMethod() + ZombiePigmanNames.get(index));
+			ent.setCustomNameVisible(true);
 		}
-
 	}
-
+	
 	public int createRandom(int min, int max) {
 		max = max - 1;
 		Random rand = new Random();
