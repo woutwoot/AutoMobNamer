@@ -61,15 +61,15 @@ public class CommandHandler implements CommandExecutor {
 						commandsender.sendMessage(ChatColor.GREEN + "******************** Bat Names ********************");
 						for (String SomeName : plugin.BatNames) {
 							commandsender.sendMessage(ChatColor.GREEN + SomeName);
-							return true;
 						}
+						return true;
 					}
 					if (args[1].equalsIgnoreCase("Chicken")) {
 						commandsender.sendMessage(ChatColor.GREEN + "******************** Chicken Names ********************");
 						for (String SomeName : plugin.ChickenNames) {
 							commandsender.sendMessage(ChatColor.GREEN + SomeName);
-							return true;
 						}
+						return true;
 					}
 					if (args[1].equalsIgnoreCase("Cow")) {
 						plugin.CowNames.clear();
