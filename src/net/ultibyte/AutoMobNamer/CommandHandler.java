@@ -756,7 +756,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -773,7 +773,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -790,7 +790,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -807,7 +807,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -824,7 +824,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -841,7 +841,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -858,7 +858,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -875,7 +875,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -892,7 +892,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -909,7 +909,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -926,7 +926,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -943,7 +943,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -960,7 +960,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -977,7 +977,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -994,7 +994,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -1011,7 +1011,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -1028,7 +1028,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -1045,7 +1045,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -1062,7 +1062,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -1079,7 +1079,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -1096,7 +1096,7 @@ public class CommandHandler implements CommandExecutor {
 							}
 						}
 						if (ItWasThere == 0) {
-							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in" + args[1] + " Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
