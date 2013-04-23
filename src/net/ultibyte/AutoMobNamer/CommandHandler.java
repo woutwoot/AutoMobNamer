@@ -52,11 +52,13 @@ public class CommandHandler implements CommandExecutor {
 			if (args.length == 2) {
 				if (args[0].equalsIgnoreCase("add")) {
 					commandsender.sendMessage(ChatColor.GREEN + "Go on... it's /namer add [MobType] [Name]");
+					return true;
 				}
 				if (args[0].equalsIgnoreCase("remove")) {
 					commandsender.sendMessage(ChatColor.GREEN + "Go on... it's /namer remove [MobType] [Name]");
+					return true;
 				}
-				if (args[0].equalsIgnoreCase("list")){
+				if (args[0].equalsIgnoreCase("list")) {
 					if (args[1].equalsIgnoreCase("Bat")) {
 						commandsender.sendMessage(ChatColor.BLUE + "******************** Bat Names ********************");
 						for (String SomeName : plugin.BatNames) {
@@ -646,14 +648,17 @@ public class CommandHandler implements CommandExecutor {
 				}
 
 				if (args[0].equalsIgnoreCase("remove")) {
+					int ItWasThere = 0;
 					if (args[1].equalsIgnoreCase("Bat")) {
 						for (String name : plugin.BatNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.BatNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Bat Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Bat Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Bat Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
@@ -663,326 +668,439 @@ public class CommandHandler implements CommandExecutor {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.ChickenNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Chicken Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Chicken Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Chicken Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
+					
+					
+					
 					if (args[1].equalsIgnoreCase("Cow")) {
 						for (String name : plugin.CowNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.CowNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Cow Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
+					
+					
+					
 					if ((args[1].equalsIgnoreCase("IronGolem")) || (args[1].equalsIgnoreCase("Iron_Golem")) || (args[1].equalsIgnoreCase("Villager_Golem")) || (args[1].equalsIgnoreCase("VillagerGolem"))) {
 						for (String name : plugin.IronGolemNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.IronGolemNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Iron Golem Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Iron Golem Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Iron Golem Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
+					
+					
+					
 					if ((args[1].equalsIgnoreCase("Mooshroom")) || (args[1].equalsIgnoreCase("MushroomCow")) || (args[1].equalsIgnoreCase("Mushroom_Cow"))) {
 						for (String name : plugin.MooshroomNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.MooshroomNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Mooshroom Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Mooshroom Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Mooshroom Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
+					
+					
+					
 					if ((args[1].equalsIgnoreCase("Ocelot")) || (args[1].equalsIgnoreCase("Cat"))) {
 						for (String name : plugin.OcelotNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.OcelotNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Ocelot Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Ocelot Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Ocelot Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
+					
+					
+					
 					if ((args[1].equalsIgnoreCase("Pig"))) {
 						for (String name : plugin.PigNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.PigNames.remove(args[2]);
-								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Pig Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Pig Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
+					
+					
+					
 					if ((args[1].equalsIgnoreCase("Sheep"))) {
 						for (String name : plugin.SheepNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.SheepNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Sheep Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Sheep Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
+					
+					
+					
 					if ((args[1].equalsIgnoreCase("Squid"))) {
 						for (String name : plugin.SquidNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.SquidNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Squid Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Squid Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
+					
+					
+					
 					if ((args[1].equalsIgnoreCase("Wolf")) || (args[1].equalsIgnoreCase("Dog"))) {
 						for (String name : plugin.WolfNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.WolfNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Wolf Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Wolf Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
+					
+					
+					
 					if ((args[1].equalsIgnoreCase("Blaze"))) {
 						for (String name : plugin.BlazeNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.BlazeNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Blaze Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Blaze Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
+					
+					
+					
 					if ((args[1].equalsIgnoreCase("CaveSpider")) || (args[1].equalsIgnoreCase("Cave_Spider"))) {
 						for (String name : plugin.CaveSpiderNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.CaveSpiderNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Cave Spider Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cave Spider Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
+					
+					
+					
 					if ((args[1].equalsIgnoreCase("Creeper"))) {
 						for (String name : plugin.CreeperNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.CreeperNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Creeper Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Creeper Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
+					
+					
+					
 					if ((args[1].equalsIgnoreCase("EnderDragon")) || (args[1].equalsIgnoreCase("Ender_Dragon")) || (args[1].equalsIgnoreCase("Dragon"))) {
 						for (String name : plugin.EnderDragonNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.EnderDragonNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from EnderDragon Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in EnderDragon Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
 
+					
+					
 					if (args[1].equalsIgnoreCase("Enderman")) {
 						for (String name : plugin.EndermanNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.EndermanNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Enderman Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Enderman Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
 
+					
+					
 					if (args[1].equalsIgnoreCase("Ghast")) {
 						for (String name : plugin.GhastNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.GhastNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Ghast Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Ghast Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
 
+					
+					
 					if (args[1].equalsIgnoreCase("MagmaCube") || args[1].equalsIgnoreCase("LavaCube") || args[1].equalsIgnoreCase("LavaSlime") || args[1].equalsIgnoreCase("MagmaSlime")) {
 						for (String name : plugin.MagmaCubeNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.MagmaCubeNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Magma Cube Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Magma Cube Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
 
+					
+					
 					if (args[1].equalsIgnoreCase("Silverfish")) {
 						for (String name : plugin.SilverfishNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.SilverfishNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Silverfish Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Silverfish Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
 
+					
+					
 					if (args[1].equalsIgnoreCase("Skeleton")) {
 						for (String name : plugin.SkeletonNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.SkeletonNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Skeleton Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Skeleton Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
 
+					
+					
 					if (args[1].equalsIgnoreCase("Slime")) {
 						for (String name : plugin.SlimeNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.SlimeNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Slime Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Slime Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
 
+					
+					
 					if (args[1].equalsIgnoreCase("SnowGolem") || args[1].equalsIgnoreCase("SnowMan")) {
 						for (String name : plugin.SnowGolemNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.SnowGolemNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Snow Golem Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Snow Golem Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
 
+					
+					
 					if (args[1].equalsIgnoreCase("Spider")) {
 						for (String name : plugin.SpiderNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.SpiderNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Spider Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Spider Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
 
+					
+					
 					if (args[1].equalsIgnoreCase("Witch")) {
 						for (String name : plugin.WitchNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.WitchNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Witch Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Witch Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
 
+					
+					
 					if (args[1].equalsIgnoreCase("Wither")) {
 						for (String name : plugin.WitherNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.WitherNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Wither Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Wither Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
 
+					
+					
 					if (args[1].equalsIgnoreCase("Zombie")) {
 						for (String name : plugin.ZombieNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.ZombieNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Zombie Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Zombie Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
 
+					
+					
 					if (args[1].equalsIgnoreCase("ZombiePigman") || args[1].equalsIgnoreCase("Pigman")) {
 						for (String name : plugin.ZombiePigmanNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.ZombiePigmanNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Zombie Pigman Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Zombie Pigman Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
 					}
 
+					
+					
 					if (args[1].equalsIgnoreCase("Villager")) {
 						for (String name : plugin.VillagerNames) {
 							if (name.equalsIgnoreCase(args[2])) {
 								plugin.VillagerNames.remove(args[2]);
 								commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " has been removed from Villager Names!");
-							} else {
-								commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Villager Names. (You may have misspelled it)");
+								ItWasThere = 1;
 							}
+						}
+						if (ItWasThere == 0) {
+							commandsender.sendMessage(ChatColor.GREEN + "That name isn't in Cow Names. (You may have misspelled it)");
 						}
 						plugin.saveConfig();
 						return true;
-					}else{
+					} else {
 						commandsender.sendMessage(ChatColor.AQUA + "'" + args[2] + "'" + ChatColor.GREEN + " Is not a valid mob name :/ Try a different variant thereof.");
 					}
 				}
