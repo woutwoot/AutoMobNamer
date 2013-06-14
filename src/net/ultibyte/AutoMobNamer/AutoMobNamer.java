@@ -58,7 +58,7 @@ public class AutoMobNamer extends JavaPlugin implements Listener {
 			MetricsLite metrics = new MetricsLite(this);
 			metrics.start();
 		} catch (IOException e) {
-			// Failed to submit the stats :-(
+			// Failed to submit the Metrics stats :-(
 		}
 
 		getCommand("namer").setExecutor(new CommandHandler(this));
