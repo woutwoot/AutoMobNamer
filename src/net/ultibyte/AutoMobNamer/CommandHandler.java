@@ -1,9 +1,13 @@
 package net.ultibyte.AutoMobNamer;
 
 import org.bukkit.ChatColor;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 
 public class CommandHandler implements CommandExecutor {
@@ -52,6 +56,19 @@ public class CommandHandler implements CommandExecutor {
 			if (args.length == 2) {
 				if (args[0].equalsIgnoreCase("add")) {
 					commandsender.sendMessage(ChatColor.GREEN + "Go on... it's /namer add [MobType] [Name]");
+					return true;
+				}
+				if (args[0].equalsIgnoreCase("setvisibility")) {
+					if(args[1].equalsIgnoreCase("visible") || args[1].equalsIgnoreCase("invisible")){
+						if(args[1].equalsIgnoreCase("visible")){
+							setVisibilityAll(true);
+						}else{
+							setVisibilityAll(false);
+						}
+						commandsender.sendMessage(ChatColor.GREEN + "Done!");
+					}else{
+						commandsender.sendMessage(ChatColor.GREEN + "Go on... it's /namer setvisibility [visible/invisible]");
+					}
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("remove")) {
@@ -1108,5 +1125,15 @@ public class CommandHandler implements CommandExecutor {
 			return false;
 		}
 		return false;
+	}
+	
+	public void setVisibilityAll(boolean value) {
+		for (World w : plugin.getServer().getWorlds()) {
+			for (Entity e : w.getEntities()) {
+				if (e.getType().isAlive() && !e.getType().equals(EntityType.PLAYER)) {
+					((LivingEntity) e).setCustomNameVisible(value);
+				}
+			}
+		}
 	}
 }

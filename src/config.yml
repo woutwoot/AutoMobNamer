@@ -1,3 +1,6 @@
+# Allwaysshowtags doesn't affect mobs which have already spawned! Use the "SetVisibility" command to change those.
+a_settings:
+   allwaysshowtags: true #doesn't affect mobs allready spawned! Use the setvisibility command to change those.
 BatNames:
 - Man
 - Rouge
