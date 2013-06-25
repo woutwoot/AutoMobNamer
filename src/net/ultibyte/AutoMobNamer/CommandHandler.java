@@ -26,12 +26,13 @@ public class CommandHandler implements CommandExecutor {
 				if (args[0].equalsIgnoreCase("help")) {
 					commandsender.sendMessage("*****************" + ChatColor.DARK_RED + "Auto" + ChatColor.BLUE + "Mob" + ChatColor.YELLOW + "Namer " + ChatColor.RESET + "*****************");
 					commandsender.sendMessage(ChatColor.AQUA + "The Commands are:");
-					commandsender.sendMessage(ChatColor.GREEN + "/namer add [MobType] [Name (Use underscores for spaces!)]");
-					commandsender.sendMessage(ChatColor.GREEN + "/namer remove [MobType] [Name (Use underscores for spaces!)]");
+					commandsender.sendMessage(ChatColor.GREEN + "/namer add [MobType] [Name (Use _ for spaces!)]");
+					commandsender.sendMessage(ChatColor.GREEN + "/namer remove [MobType] [Name (Use _ for spaces!)]");
 					commandsender.sendMessage(ChatColor.GREEN + "/namer ColorOff  -  Turns colors off for newly spawned mobs");
 					commandsender.sendMessage(ChatColor.GREEN + "/namer ColorOn  -  Turns color on for newly spawned mobs");
-					commandsender.sendMessage(ChatColor.GREEN + "/namer clear [MobType]  -  Removes all names for this Mob Type (Leaving just the mob type as its name which you can remove later)");
-					commandsender.sendMessage("***************** That's it! *****************");
+					commandsender.sendMessage(ChatColor.GREEN + "/namer clear [MobType]  -  Removes all names for this Mob Type (Leaving just the mob type as its name which you can also remove if you wish.)");
+					commandsender.sendMessage(ChatColor.GREEN + "/namer setvisibility [visible/invisible] - Causes mob names to only be visible when looked at at close proximity");
+					commandsender.sendMessage("*****************" + ChatColor.YELLOW + "Thats it!" + ChatColor.WHITE + "*****************");
 					return true;
 				}
 				if (args[0].equalsIgnoreCase("add")) {
